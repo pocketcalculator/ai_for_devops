@@ -4,6 +4,16 @@ import { Link } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "~/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "~/components/ui/dialog"
+import { Label } from "~/components/ui/label"
 import { CheckCircle } from "lucide-react";
 
 export const meta: MetaFunction = () => {
@@ -22,16 +32,16 @@ export default function Index() {
           <span className="sr-only">Acme Inc</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#features">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#home">
             Home
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#pricing">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#upload">
             Upload Template
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#about">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#reports">
             View Reports
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#contact">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" to="#settings">
             Settings
           </Link>
         </nav>
@@ -49,7 +59,37 @@ export default function Index() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button>Upload ARM JSON File</Button>
+
+                <Dialog>
+      <DialogTrigger asChild>
+      <Button>Upload ARM JSON File</Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>Edit profile</DialogTitle>
+          <DialogDescription>
+            Make changes to your profile here. Click save when you're done.
+          </DialogDescription>
+        </DialogHeader>
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="name" className="text-right">
+              Name
+            </Label>
+            <Input id="name" value="Pedro Duarte" className="col-span-3" />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+              Username
+            </Label>
+            <Input id="username" value="@peduarte" className="col-span-3" />
+          </div>
+        </div>
+        <DialogFooter>
+          <Button type="submit">Save changes</Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
               </div>
             </div>
           </div>
