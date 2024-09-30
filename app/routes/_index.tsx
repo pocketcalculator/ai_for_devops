@@ -8,8 +8,8 @@ import { CheckCircle } from "lucide-react";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "ARM Template Parameter Validator" },
+    { name: "description", content: "A web tool that validates and provides guidance on ARM (Azure Resource Manager) code" },
   ];
 };
 
@@ -23,16 +23,16 @@ export default function Index() {
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:underline underline-offset-4" to="#features">
-            Features
+            Home
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" to="#pricing">
-            Pricing
+            Upload Template
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" to="#about">
-            About
+            View Reports
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" to="#contact">
-            Contact
+            Settings
           </Link>
         </nav>
       </header>
@@ -42,56 +42,15 @@ export default function Index() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Welcome to Our Amazing Product
+                  ARM Template Parameter Validator
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Discover how our innovative solution can transform your workflow and boost productivity.
+                  Upload your Azure Resource Manager (ARM) template and get instant validation and guidance on best practices.
                 </p>
               </div>
               <div className="space-x-4">
-                <Button>Get Started</Button>
-                <Button variant="outline">Learn More</Button>
+                <Button>Upload ARM JSON File</Button>
               </div>
-            </div>
-          </div>
-        </section>
-        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Our Features</h2>
-            <div className="grid gap-6 lg:grid-cols-3 lg:gap-12">
-              <Card>
-                <CardHeader>
-                  <CheckCircle className="w-8 h-8 mb-2 text-green-500" />
-                  <CardTitle>Easy Integration</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Seamlessly integrate our product into your existing workflow with just a few clicks.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CheckCircle className="w-8 h-8 mb-2 text-green-500" />
-                  <CardTitle>Advanced Analytics</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Gain valuable insights with our powerful analytics tools and data visualization.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CheckCircle className="w-8 h-8 mb-2 text-green-500" />
-                  <CardTitle>24/7 Support</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Our dedicated support team is always ready to assist you with any questions or issues.
-                  </CardDescription>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
@@ -101,7 +60,7 @@ export default function Index() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Stay Updated</h2>
                 <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Subscribe to our newsletter for the latest updates and exclusive offers.
+                  Join our mailing list to receive updates on the ARM Template Parameter Validator tool.
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
@@ -115,7 +74,7 @@ export default function Index() {
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Acme Inc. All rights reserved.</p>
+        <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Microsoft - Support for Mission Critical.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" to="/terms">
             Terms of Service
