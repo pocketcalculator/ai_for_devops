@@ -6,6 +6,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        segoe: [
+          "Segoe UI", 
+          "sans-serif"
+        ],
         sans: [
           "Inter",
           "ui-sans-serif",
