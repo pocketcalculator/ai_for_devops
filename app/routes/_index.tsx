@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { Children, useCallback, useEffect, useState } from "react";
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
+import Upload from "~/components/ui/Upload";
 import {
   Dialog,
   DialogContent,
@@ -27,16 +28,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to handle menu toggle
-
-  useEffect(() => {
-    if (isDialogOpen) {
-      document.body.classList.add("modal-open");
-    } else {
-      document.body.classList.remove("modal-open");
-    }
-  }, [isDialogOpen]);
 
   return (
     <div className="flex flex-col min-h-screen font-segoe">
